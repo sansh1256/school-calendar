@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Calendar</title>
+</head>
+<body>
+    <h1>📅 Calendar</h1>
+
+    <a href="/">Calendar</a> |
+    <a href="/homework">Homework</a> |
+    <a href="/tasks">Tasks</a>
+
+    <form method="POST">
+        <input name="text" placeholder="Event">
+        <select name="type">
+            <option value="school">School</option>
+            <option value="personal">Personal</option>
+        </select>
+        <button>Add</button>
+    </form>
+
+    <ul>
+        {% for e in events %}
+            <li>[{{e[2]}}] {{e[1]}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

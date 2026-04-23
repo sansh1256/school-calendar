@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework</title>
+</head>
+<body>
+    <h1>📚 Homework</h1>
+
+    <a href="/">Calendar</a> |
+    <a href="/homework">Homework</a> |
+    <a href="/tasks">Tasks</a>
+
+    <form method="POST">
+        <input name="text" placeholder="Homework">
+        <button>Add</button>
+    </form>
+
+    <ul>
+        {% for h in data %}
+            <li>{{h[1]}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
